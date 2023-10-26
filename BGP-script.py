@@ -1,4 +1,4 @@
-# the required files are uploaded to GitHub repo
+# code to upload files
 
 from google.colab import files
 uploaded = files.upload()
@@ -10,7 +10,6 @@ IP_LIST = next(iter(uploaded))
 print(IP_LIST, "uploaded")
 
 import ipaddress
-
 def parseBGPTable(filename):
     dictToStoreIP = {}
     dbFile = open("DB_091803_v1.txt") 
@@ -46,4 +45,5 @@ for line in ipFile:
   print('IP = %s' % ipAddr)
   print('Prefix Len = %d' % prefix_len)
   print('ASN = %s' % asn)
-ipFile.close()
+ipFile.close()  
+
